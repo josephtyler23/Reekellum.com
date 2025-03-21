@@ -1,0 +1,63 @@
+<div class="about-page">
+  <!-- Main content container with story and features -->
+  <div class="about-content container">
+    <div class="row justify-content-center py-4">
+      <div class="col-lg-10">
+        <!-- Story section -->
+        <div class="text-center mb-5">
+          <h2 class="story-heading">My Story</h2>
+          <p class="story-text">
+            Reek Ellum Styling Suite was founded by Lazarius "Rico" Tyler, a barber professional that's been perfecting his craft since 2009. He's built a moniker for himself based on one on one experiences that grow into relationships. The experiences that are provided are not only second to none, but also available around the clock.
+          </p>
+        </div>
+        
+        <!-- Feature boxes -->
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="feature-box">
+              <h3>Personalized Experience</h3>
+              <p>
+                I believe in transformative grooming experiences that go beyond a simple haircut. 
+                Each session is a journey of personal style and confidence.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="feature-box">
+              <h3>Craftsmanship</h3>
+              <p>
+                With years of perfecting my craft, I bring precision, passion, and 
+                personalized attention to every client who sits in my chair.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Slideshow Section - fills space between content and 5% from bottom -->
+  <div class="container">
+    <div class="slideshow-section">
+      <div class="slideshow-container">
+        <div class="slideshow-slide" [class.active]="currentSlide === 0">
+          <img src="assets/self/Untitled design-3.JPEG" alt="Background image 1" class="slideshow-image" loading="lazy">
+        </div>
+        <div class="slideshow-slide" [class.active]="currentSlide === 1">
+          <img src="assets/self/Untitled design-4.JPEG" alt="Background image 2" class="slideshow-image" loading="lazy">
+        </div>
+        <div class="slideshow-slide" [class.active]="currentSlide === 2">
+          <img src="assets/self/Untitled design-5.JPG" alt="Background image 3" class="slideshow-image" loading="lazy">
+        </div>
+        <div class="slideshow-slide" [class.active]="currentSlide === 3">
+          <img src="assets/self/Untitled design-6.JPG" alt="Background image 4" class="slideshow-image" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Booking button at the bottom with span for responsive design -->
+  <a href="https://booksy.com/en-us/665242_reek-ellum-styling-suite_barber-shop_134786_dallas" class="btn-all-services">
+    <span>Book Your Experience</span> <i class="bi bi-calendar-check"></i>
+  </a>
+</div>

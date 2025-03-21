@@ -1,0 +1,43 @@
+<!-- app.component.html -->
+<!-- Rearranged structure to ensure controls are above other elements -->
+<div class="app-container">
+  <!-- Navbar at the top -->
+  <app-navbar></app-navbar>
+  
+  <!-- Video background -->
+  <div class="video-container">
+    <video id="background-video" autoplay muted loop playsinline preload="auto">
+      <source src="https://firebasestorage.googleapis.com/v0/b/angular-test-6cdde.firebasestorage.app/o/output.mp4?alt=media&token=b7feb0fd-57bb-4bf2-8367-6af923dd7112" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  
+  
+  
+  <!-- Main content - each page's content will be rendered here -->
+  <div class="page-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- Controls positioned OUTSIDE the app-container -->
+<!-- Mute Button -->
+<div class="video-controls">
+  <button id="mute-btn" class="mute-toggle">
+    <i id="mute-icon"></i>
+  </button>
+</div>
+
+<!-- Social Media Icons -->
+<div class="social-icons">
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/reekdefreek/" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <!-- Booksy -->
+  <a href="https://booksy.com/en-us/665242_reek-ellum-styling-suite_barber-shop_134786_dallas" target="_blank" class="booksy-icon">
+    <img src="assets/download.jpeg" alt="Booksy">
+  </a>
+</div>

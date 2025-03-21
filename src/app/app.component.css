@@ -1,0 +1,178 @@
+/* app.component.css */
+.app-container {
+    position: relative;
+    min-height: 100vh;
+    pointer-events: none; /* This prevents container from blocking clicks */
+  }
+  
+  /* Video Container Styles */
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Place it behind content */
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+  }
+  
+  /* Video Controls - Fixed Z-Index */
+  .video-controls {
+    position: fixed; /* Fixed position */
+    bottom: 40px;
+    left: 40px;
+    z-index: 1000; /* Make sure this is higher than any other z-index */
+    pointer-events: auto !important; /* Explicitly enable pointer events */
+  }
+    
+  .mute-toggle {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: auto !important; /* Ensure clicks are captured */
+  }
+    
+  .mute-toggle:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  #mute-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f028"; /* Volume icon */
+  }
+  
+  #mute-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f028"; /* Volume icon */
+  }
+  
+/* When muted - target by component's isMuted class */
+.fa-volume-mute::before {
+  content: "\f026" !important; /* fa-volume-off */
+}
+
+/* Alternative selectors to catch all cases */
+.fas.fa-volume-mute::before {
+  content: "\f026" !important; /* fa-volume-off */
+}
+  /* Social Icons - Fixed Z-Index */
+  .social-icons {
+    position: fixed; /* Fixed position */
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000; /* Make sure this is higher than any other z-index */
+    pointer-events: auto !important; /* Explicitly enable pointer events */
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    transition: all 0.3s ease;
+    pointer-events: auto !important; /* Ensure clicks are captured */
+  }ç
+  
+  .social-icons a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+  }
+  
+  .social-icons .booksy-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    pointer-events: auto !important; /* Explicitly enable pointer events */
+  }
+  .social-icons a .fa-instagram::before {
+    content: "\f16d"; /* Instagram icon Unicode */
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+  }
+  
+  .social-icons .booksy-icon img {
+    width: 20px;
+    height: auto;
+  }
+  
+  .social-icons .booksy-icon:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+  }
+  
+  /* Navbar Styles */
+  app-navbar {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    pointer-events: auto !important; /* Enable pointer events for navbar */
+  }
+  
+  /* Content area */
+  .page-content {
+    position: relative;
+    padding-top: 80px; /* Space for navbar */
+    min-height: calc(100vh - 80px);
+    z-index: 1;
+    pointer-events: auto !important; /* Enable pointer events for content */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .social-icons {
+      bottom: 20px;
+      right: 20px;
+    }
+    
+    .social-icons a {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+    }
+    
+    .video-controls {
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* For very small screens */
+    .video-container video {
+      width: auto;
+      height: 100%;
+      object-position: center;
+    }
+  }

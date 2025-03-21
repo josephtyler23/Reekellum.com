@@ -1,0 +1,121 @@
+/* Navbar Global Styles */
+.navbar {
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+    z-index: 1000; /* High but not as high as bottom controls */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+    backdrop-filter: blur(3px);
+    pointer-events: auto; /* Enable pointer events for the navbar */
+}
+
+/* Make sure navbar content doesn't extend beyond visible area */
+.navbar .container {
+    max-height: calc(80px + 1rem); /* Based on logo height plus padding */
+    overflow: visible; /* Allow dropdown to be visible */
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+    color: #82CAFF !important; /* Light grey for inactive links */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* Text shadow for better visibility */
+    font-weight: 500;
+    pointer-events: auto; /* Ensure links are clickable */
+}
+
+.navbar .navbar-brand {
+    color: white !important;
+    pointer-events: auto; /* Ensure brand is clickable */
+}
+
+/* Active Link Styling */
+.nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #ffffff !important; /* Bright white for active links */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+}
+
+/* Navbar Logo */
+.navbar-logo {
+    height: 150px; /* Increased logo size */
+    width: auto;
+    max-height: 100%;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5)); /* Enhanced shadow for better visibility */
+}
+
+/* Hover Effects */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    /* Dropdown menu styling */
+    .navbar .navbar-collapse {
+        background-color: rgba(15, 15, 15, 0.95); /* Darker background for dropdown */
+        color: white;
+        border-radius: 5px;
+        margin-top: 10px; /* Add some space between navbar and dropdown */
+        padding: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1001; /* Ensure dropdown is above other elements */
+        pointer-events: auto; /* Ensure dropdown is clickable */
+    }
+    
+    .navbar .navbar-collapse .nav-link {
+        color: #e0e0e0 !important; /* Slightly off-white for better visibility */
+        padding: 10px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .navbar .navbar-collapse .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+    }
+
+    /* Adjust logo size for mobile but keep it larger than before */
+    .navbar-logo {
+        height: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-logo {
+        height: 100px;
+    }
+}
+
+/* Fix for navbar toggler icon color */
+.navbar .navbar-toggler-icon {
+    filter: invert(1); /* Make the hamburger icon white on transparent background */
+}
+
+/* Ensure navbar toggler is clickable */
+.navbar-toggler {
+    pointer-events: auto;
+    z-index: 1002;
+}

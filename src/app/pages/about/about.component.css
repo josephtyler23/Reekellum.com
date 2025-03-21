@@ -1,0 +1,254 @@
+/* Import Gruppo font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+/* Main content container */
+.about-page {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 15px;
+  color: white;
+}
+
+/* Main content styling */
+.about-content.container {
+  position: relative;
+  z-index: 5;
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px); /* Blur effect for better readability */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.about-content.container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Story section styling */
+.story-heading {
+  color: #82CAFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.story-text {
+  color: #82CAFF;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Feature boxes styling */
+.feature-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  height: 100%; /* Equal height boxes */
+}
+
+.feature-box:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.feature-box h3 {
+  color: #82CAFF;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.feature-box p {
+  color: #82CAFF;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Slideshow styling - adjusted to fill space */
+.slideshow-section {
+  margin-top: 30px;
+  margin-bottom: calc(5vh + 60px); /* 5% from bottom plus space for booking button */
+  position: relative;
+  height: calc(95vh - 450px); /* Dynamic height calculation: 95% of viewport height minus space for content */
+  min-height: 200px; /* Minimum height for very small screens */
+  max-width: 350px; /* Control width to maintain portrait aspect ratio */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slideshow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slideshow-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow-slide.active {
+  opacity: 1;
+}
+
+.slideshow-image {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center 15%; /* Focus on upper portion of portrait images */
+  opacity: 0.75; /* Make images slightly faded */
+  filter: brightness(0.9) contrast(0.95); /* Additional subtle fading effect */
+}
+
+/* Booking button style - matched to reviews component */
+.btn-all-services {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: rgba(130, 202, 255, 0.2);
+  color: #82CAFF;
+  border: 2px solid rgba(130, 202, 255, 0.7);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  font-family: "Gruppo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn-all-services:hover {
+  background-color: rgba(130, 202, 255, 0.9);
+  color: white;
+  box-shadow: 0 5px 15px rgba(130, 202, 255, 0.3);
+  text-decoration: none;
+}
+
+.btn-all-services i {
+  margin-left: 8px;
+}
+
+/* Media Queries for button */
+@media (max-width: 768px) {
+  .btn-all-services {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .btn-all-services i {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-all-services {
+    width: auto;
+    max-width: 180px;
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+    text-align: center;
+    background-color: rgba(130, 202, 255, 0.3);
+    bottom: 15px;
+  }
+  
+  .btn-all-services i {
+    font-size: 0.8rem;
+  }
+  
+  /* Adjust text to make it shorter on very small screens */
+  .btn-all-services:before {
+    content: "Book Now";
+  }
+  
+  .btn-all-services span {
+    display: none; /* Hide the original text */
+  }
+}
+
+.btn-all-services i {
+  font-size: 1.2rem;
+}
+
+/* Animation for content */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content.container {
+    padding: 20px 15px;
+  }
+  
+  .story-heading {
+    font-size: 2rem;
+  }
+  
+  .story-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .feature-box {
+    padding: 20px;
+  }
+  
+  .feature-box h3 {
+    font-size: 1.3rem;
+  }
+  
+  .slideshow-section {
+    height: 300px; /* Shorter on mobile */
+  }
+}

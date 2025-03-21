@@ -1,0 +1,311 @@
+/* Transparent Services Section Styles */
+.services-section {
+  background-color: transparent;
+  position: relative;
+  margin-bottom: 0;
+  padding: 4rem 0;
+  z-index: 10;
+  color: #82CAFF;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: #82CAFF;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-subtitle {
+  color: #e6e6e6;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Transparent Service Cards */
+.service-card {
+  background-color: rgba(40, 40, 40, 0.4); /* Darker background with 40% opacity */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  border: 1px solid rgba(130, 202, 255, 0.4); /* Darker border with blue tint */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  padding: 2rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+  background-color: rgba(40, 40, 40, 0.5); /* Slightly darker on hover */
+  border: 1px solid rgba(130, 202, 255, 0.6); /* More visible border on hover */
+}
+
+.service-card:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(130, 202, 255, 0.1); /* Changed to match brand color */
+  border-radius: 50%;
+  top: -20px;
+  right: -20px;
+  z-index: 0;
+}
+
+.service-badges {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.time-badge {
+  background-color: rgba(108, 117, 125, 0.8);
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0 12px;
+  margin-bottom: 0.3rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.deal-badge {
+  background-color: rgba(40, 167, 69, 0.8);
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0 0 0 12px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.premium-badge {
+  background-color: rgba(220, 53, 69, 0.8);
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0 12px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.exclusive-badge {
+  background-color: rgba(253, 126, 20, 0.8);
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0 12px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.featured-badge {
+  background-color: rgba(102, 16, 242, 0.8);
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0 0 0 12px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(13, 110, 253, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background-color:   #82CAFF;
+  color: white;
+  transform: scale(1.1);
+}
+
+.service-icon i {
+  font-size: 1.5rem;
+  color: #82CAFF;
+  transition: all 0.3s ease;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  color: #82CAFF;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.service-description {
+  color: #82CAFF;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.service-notes {
+  background-color: rgba(0, 0, 0, 0.3); /* Slightly darker background */
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+}
+
+
+.service-notes p {
+  margin-bottom: 0.5rem;
+  color: #82CAFF;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.service-notes p:last-child {
+  margin-bottom: 0;
+}
+
+.service-notes i {
+  margin-right: 0.5rem;
+  color: #82CAFF;
+}
+
+.service-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color:   #82CAFF;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-all-services {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: rgba(13, 110, 253, 0.2);
+  color: #ffffff;
+  border: 2px solid rgba(13, 110, 253, 0.7);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.btn-all-services:hover {
+  background-color: rgba(13, 110, 253, 0.9);
+  color: white;
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+  text-decoration: none;
+}
+
+.btn-all-services i {
+  margin-left: 8px;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .service-card {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-notes {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .service-title {
+    font-size: 1.1rem;
+    padding-right: 70px; /* Make room for the badges */
+  }
+  
+  .service-price {
+    font-size: 1.5rem;
+  }
+  
+  .service-badges {
+    max-width: 120px;
+  }
+  
+  .time-badge, .deal-badge, .premium-badge, .exclusive-badge, .featured-badge {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .services-section {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    padding: 1.2rem;
+    background-color: rgba(40, 40, 40, 0.5); /* Even darker on mobile for readability */
+  }
+  
+  .service-description {
+    font-size: 1.2rem;
+  }
+  
+  .service-notes {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly more opaque on mobile */
+  }
+  
+  .btn-all-services {
+    width: auto;
+    max-width: 200px;
+    font-size: 0.9rem;
+    padding: 0.9rem .25rem;
+    text-align: center;
+    background-color: rgba(13, 110, 253, 0.3); /* Slightly more visible on mobile */
+    
+  }
+
+  .section-title, .service-title {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9); /* Stronger text shadow for mobile */
+  }
+
+  .service-description, .service-notes p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Stronger text shadow for mobile */
+  }
+  
+  /* Add extra padding at the bottom to prevent content from being hidden behind the fixed button */
+  .services-section {
+    padding-bottom: 100px;
+  }
+}
